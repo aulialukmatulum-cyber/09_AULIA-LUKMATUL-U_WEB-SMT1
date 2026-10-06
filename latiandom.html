@@ -1,0 +1,68 @@
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<head>
+
+    <body>
+        <h1 id="judul">aulia</h1>
+        <button onclick="gantiNama('maya')">Ganti Nama</button>
+        <script>
+            function gantiNama(masukannama) {
+                let nama= document.getElementById("judul");
+                if (nama.innerText == "aulia") {
+                    nama.innerText = "maya";
+                }else {
+                    nama.innerText = "aulia";
+                }
+            function tambah() {
+                let p = document.createElement("p");
+                p.innerText = "test";
+                document.body.appendChild(p);
+            }
+
+            function hapusTeks() {
+            document.getElementById("hapus").remove();
+                }
+         }
+        </script>
+
+        <div id="hasil"></div>
+<button onclick="tambah()">Klik Saya</button>
+<script>
+    function tambah() {
+        let elemen = document.createElement("p");
+        elemen.textContent = "Selamat Datang di Website Saya";
+        document.getElementById("hasil").appendChild(elemen);
+    }
+</script>
+
+
+<p id="hapus">"Selamat Datang di Website Saya"</p>
+        <button onclick="hapusTeks()">Klik</button>
+    <script>
+    function hapusTeks() {
+            document.getElementById("hapus").remove();
+                }
+</script>
+
+    </body>
+</head>
+
+
+
+<h1>Jumlah Klik: <span id="hitung">0</span></h1>
+<button onclick="tambahKlik()">Klik Saya!</button>
+
+<script>
+
+    let jumlahKlik = 0;
+
+    function tambahKlik() {
+        jumlahKlik++;
+        document.getElementById("hitung").textContent = jumlahKlik;
+    }
+</script>
+
+
